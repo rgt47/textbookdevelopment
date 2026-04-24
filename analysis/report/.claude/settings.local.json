@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/zenn/Dropbox/prj/qblog/_site/**)",
+      "Bash(python3 -m http.server 8765)"
+    ]
+  }
+}
