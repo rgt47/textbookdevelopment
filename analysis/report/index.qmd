@@ -29,7 +29,7 @@ HERO IMAGE
 
 # Introduction
 
-I did not really appreciate how much structural decision-making goes into a textbook until I tried to draft two of them at once. A methods volume ('Statistical Computing in the Age of AI', for PHB 228 at UCSD) and a workflow companion ('Biostatistics Practicum', for PHB 243B) were both overdue, and I wanted them to share enough scaffolding that a student could move between them without reorienting.
+I did not really appreciate how much structural decision-making goes into a textbook until I tried to draft two of them at once. A methods volume ('Statistical Computing in the Age of AI') and a workflow companion ('Biostatistics Practicum') were both overdue, and I wanted them to share enough scaffolding that a student could move between them without reorienting.
 
 The turning point came when I stopped treating 'in the Age of AI' as a subtitle and started treating it as a structural obligation. Three short prose sections of 'Prompts to try' at the end of each chapter was decoration. What the subtitle required was an explicit front-loaded treatment of what the human statistician contributes, paired with an end-of-chapter verification workflow that exercises those contributions.
 
@@ -38,14 +38,14 @@ This post walks through the decisions that produced the two books' current state
 ## Motivations
 
 - Existing statistical computing textbooks are excellent but largely predate widespread LLM use. A curriculum written as if 2019 were still the current year trains students for a workplace that no longer exists.
-- UCSD biostatistics MS students arrive with LLMs already in hand. Pretending otherwise produces a textbook that does not match their reading context.
+- Graduate biostatistics students arrive with LLMs already in hand. Pretending otherwise produces a textbook that does not match their reading context.
 - I wanted a dual-volume approach: a methods book (numerical algorithms, models, bootstrap, Bayesian) and a practicum (reproducibility, Git, Docker, SAS, CDISC). The two should share scaffolding but remain independently readable.
 - A peer-program survey (22 US biostat MS programmes) had surfaced specific content gaps (missing data, SAS, survival, Bayesian computation) that I wanted to close without restructuring the books.
 - I wanted to document the decision-making as it happened so that the next instructor building out a similar text has a worked example to follow.
 
 ## Objectives
 
-1. Scaffold two Quarto books (PHB 228 methods, PHB 243B practicum) with compatible chapter structure, shared citation conventions, and visually distinct rendering.
+1. Scaffold two Quarto books (a methods volume and a practicum companion) with compatible chapter structure, shared citation conventions, and visually distinct rendering.
 2. Establish a 'statistician's contribution' / 'collaborating with an LLM' pattern that earns the 'in the Age of AI' subtitle.
 3. Ground chapter outlines in existing lecture materials, a comprehensive peer-MS-programme survey, and Jenny Bryan's STAT 545 philosophical framing.
 4. Apply front-matter and code-block improvements (code annotations, first-class callouts, typographic differentiation) as a named 'polish' pass.
@@ -130,7 +130,7 @@ The session's work sorted into four structural decisions, each with downstream c
 
 ## Decision 1: book boundary and overlap
 
-The methods volume (228) covers statistical-theory content an MS programme teaches in a typical one-quarter course: programming in R, numerical linear algebra, optimisation, simulation, bootstrap, linear models, GLM, mixed models, survival, Bayesian. The practicum (243B) covers Jenny Bryan's 'everything in data analysis except modelling and inference': reproducibility infrastructure, Git, Docker, rrtools, renv, Quarto, tidyverse wrangling, CDISC data standards, SAS, and two full case studies.
+The methods volume covers statistical-theory content an MS programme teaches in a typical one-quarter course: programming in R, numerical linear algebra, optimisation, simulation, bootstrap, linear models, GLM, mixed models, survival, Bayesian. The practicum covers the workflow that surrounds the methods: reproducibility infrastructure, Git, Docker, rrtools, renv, Quarto, tidyverse wrangling, CDISC data standards, SAS, and two full case studies.
 
 The boundary is enforced by discipline in the table of contents. Where a chapter in one volume touches a topic covered in the other, the prose uses a textual pointer ('see the Missing Data chapter of the companion *Biostatistics Practicum* volume') rather than a Quarto cross-reference, because `@sec-*` anchors do not resolve across distinct books.
 
@@ -308,8 +308,8 @@ The secondary lesson was that a dual-volume approach clarifies scope. One book t
 
 **Book repositories:**
 
-- Methods volume: `~/Dropbox/prj/tch/01-phb228-stat-computing/phb228-2026/textbook/`
-- Practicum volume: `~/Dropbox/prj/tch/biostatistics-practicum/`
+- Methods volume: `~/prj/tch/methods-textbook/textbook/`
+- Practicum volume: `~/prj/tch/biostatistics-practicum/`
 
 **To reproduce the two-book scaffold:**
 
