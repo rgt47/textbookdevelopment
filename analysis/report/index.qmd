@@ -35,6 +35,8 @@ The turning point came when I stopped treating 'in the Age of AI' as a subtitle 
 
 This post walks through the decisions that produced the two books' current state: chapter template, visual design, bibliography growth, and the specific AI-collaboration pattern. The post is a retrospective on one working session, not a finished tutorial. Readers drafting their own domain-specific textbook can probably save themselves some of the back-tracking I did.
 
+More formally, this post documents the convergence of the Knowledge Management and LLM-Augmented Editing concerns of the Workflow Construct described in [post 52](/posts/52-workflow-construct/). Authoring a textbook is the largest-scale knowledge-management task most academics will undertake; doing so 'in the age of AI' surfaces specifically how the LLM-augmented editing layer interacts with the file-system, document, and bibliographic layers below it. The retrospective documented here is one working session worth of evidence on how those layers compose under sustained use.
+
 ## Motivations
 
 - Existing statistical computing textbooks are excellent but largely predate widespread LLM use. A curriculum written as if 2019 were still the current year trains students for a workplace that no longer exists.
