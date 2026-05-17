@@ -1,6 +1,5 @@
 ---
 title: "Building a statistical computing textbook in the Age of AI"
-subtitle: "Structural decisions, AI-collaboration framework, and Quarto tooling across a two-volume book sequence"
 author: "Ronald 'Ryy' G. Thomas"
 date: "2026-04-24"
 categories: [quarto, teaching, reproducibility]
@@ -23,7 +22,7 @@ format:
 HERO IMAGE
 ============================================================================ -->
 
-![A shelf of two books rendered as a Quarto site, symbolising the dual-volume structure that emerged during this drafting session.](media/images/hero.png){.img-fluid width=80%}
+![A shelf of two books rendered as a Quarto site, symbolising the dual-volume structure that emerged during this drafting session.](media/images/hero.png){.img-fluid width=80% fig-align="center"}
 
 *A textbook's subtitle is a commitment. 'In the Age of AI' commits the author to explaining where the human-LLM division of labour actually falls for each topic.*
 
