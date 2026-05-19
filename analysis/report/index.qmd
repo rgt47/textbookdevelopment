@@ -32,9 +32,16 @@ I did not really appreciate how much structural decision-making goes into a text
 
 The turning point came when I stopped treating 'in the Age of AI' as a subtitle and started treating it as a structural obligation. Three short prose sections of 'Prompts to try' at the end of each chapter was decoration. What the subtitle required was an explicit front-loaded treatment of what the human statistician contributes, paired with an end-of-chapter verification workflow that exercises those contributions.
 
-This post walks through the decisions that produced the two books' current state: chapter template, visual design, bibliography growth, and the specific AI-collaboration pattern. The post is a retrospective on one working session, not a finished tutorial. Readers drafting their own domain-specific textbook can probably save themselves some of the back-tracking I did.
+We walk through the decisions that produced the two books' current
+state: chapter template, visual design, bibliography growth, and the
+specific AI-collaboration pattern. The post is a retrospective on one
+working session, not a finished tutorial. Readers drafting a
+domain-specific textbook can probably save themselves some of the
+back-tracking documented here.
 
-More formally, this post documents the convergence of the Knowledge Management and LLM-Augmented Editing concerns of the Workflow Construct described in [post 52](/posts/52-workflow-construct/). Authoring a textbook is the largest-scale knowledge-management task most academics will undertake; doing so 'in the age of AI' surfaces specifically how the LLM-augmented editing layer interacts with the file-system, document, and bibliographic layers below it. The retrospective documented here is one working session worth of evidence on how those layers compose under sustained use.
+More formally, we document here the convergence of the Knowledge
+Management and LLM-Augmented Editing concerns of the Workflow
+Construct described in [post 52](/posts/52-workflow-construct/). Authoring a textbook is the largest-scale knowledge-management task most academics will undertake; doing so 'in the age of AI' surfaces specifically how the LLM-augmented editing layer interacts with the file-system, document, and bibliographic layers below it. The retrospective documented here is one working session worth of evidence on how those layers compose under sustained use.
 
 ## Motivations
 
@@ -51,13 +58,20 @@ More formally, this post documents the convergence of the Knowledge Management a
 3. Ground chapter outlines in existing lecture materials, a comprehensive peer-MS-programme survey, and Jenny Bryan's STAT 545 philosophical framing.
 4. Apply front-matter and code-block improvements (code annotations, first-class callouts, typographic differentiation) as a named 'polish' pass.
 
-I am documenting the process as I learned it. If you spot mistakes or have a better approach, please let me know.
+The process is documented as it unfolded. Corrections and better
+approaches are welcome; see the contact section at the end.
 
 ![Workspace ambiance image: a desk with two browser tabs open side-by-side, each rendering a different Quarto book under the same file-system hierarchy.](media/images/ambiance1.png){.img-fluid}
 
 # What is a Quarto book?
 
-A Quarto book is a directory of `.qmd` files (Markdown with executable R code chunks) bound together by a `_quarto.yml` configuration, rendered to a multi-format output (HTML, PDF, EPUB, Word) by the `quarto` command-line tool. Think of it as a technical-writing Makefile: you declare chapters, parts, cross-references, and output formats in YAML, and `quarto render` produces a website plus a printable PDF from the same source.
+A Quarto book is a directory of `.qmd` files (Markdown with
+executable R code chunks) bound together by a `_quarto.yml`
+configuration, rendered to a multi-format output (HTML, PDF, EPUB,
+Word) by the `quarto` command-line tool. Think of it as a
+technical-writing Makefile: chapters, parts, cross-references, and
+output formats are declared in YAML, and `quarto render` produces a
+website plus a printable PDF from the same source.
 
 The specific convention I follow is the Posit book-family pattern (R for Data Science, Advanced R, R Packages). Each content chapter carries a three-question diagnostic quiz at the top, collapsible 'check your understanding' callouts distributed through the content, exercises and a 'further reading' block at the foot, and the quiz answers at the very end.
 
@@ -171,7 +185,8 @@ Each of these settings is a named Quarto feature. `code-annotations: hover` enab
 
 # Verification
 
-After every structural change, I re-rendered both books and checked the warnings:
+After every structural change, both books were re-rendered and the
+warnings were checked:
 
 ```sh
 cd path/to/methods/textbook
@@ -269,12 +284,14 @@ A textbook's subtitle is a commitment. 'Statistical Computing in the Age of AI' 
 
 The secondary lesson was that a dual-volume approach clarifies scope. One book tries to be everything to everyone; two books can afford to be boundary-conscious, each pointing to the other where their topics connect. The methods volume covers what modelling looks like; the practicum covers everything that surrounds modelling. A student who reads both comes out with a complete picture and has an easier time than the single-volume reader because each book's scope is visibly narrower.
 
-**Main takeaways:**
-
-- A subtitle is a structural obligation; earn it with sections, not sidebars.
-- Two books with shared scaffolding and distinct visual identity are easier to maintain than one oversized volume.
-- Quarto's code-annotation, code-tools, and first-class callout features should be configured on day one, not bolted on during a polish pass.
-- Read the slides, the speaker notes, and the R scripts separately when porting lecture content. They do not fully overlap.
+In conclusion, four points merit emphasis. First, a subtitle is a
+structural obligation: it must be earned with sections, not sidebars.
+Second, two books with shared scaffolding and distinct visual identity
+are easier to maintain than one oversized volume. Third, Quarto's
+code-annotation, code-tools, and first-class callout features should
+be configured on day one, not bolted on during a polish pass. Fourth,
+when porting lecture content, the slides, the speaker notes, and the
+R scripts should be read separately, as they do not fully overlap.
 
 # See Also
 
@@ -339,12 +356,14 @@ The chapter-template structure (Prerequisites, Learning Objectives, Orientation,
 - **LinkedIn:** [Ronald Glenn Thomas](https://linkedin.com/in/rgthomaslab)
 - **Email:** [Contact form](https://rgtlab.org/contact)
 
-I would enjoy hearing from you if:
+Feedback is welcome in the following cases:
 
-- You are drafting a similar domain-specific textbook and want to compare structural decisions.
-- You have a better approach to the human-LLM division of labour framework.
-- You teach a biostatistics MS programme with different curriculum gaps than the ones this process surfaced.
-- You just want to say hello and connect.
+- Drafting a similar domain-specific textbook and wishing to compare
+  structural decisions.
+- A better approach to the human-LLM division of labour framework.
+- Teaching a biostatistics MS programme with different curriculum gaps
+  than the ones this process surfaced.
+- A general connection is of interest.
 
 ---
 
